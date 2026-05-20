@@ -2,10 +2,6 @@
 const dns = require('node:dns');
 dns.setDefaultResultOrder('ipv4first');
 
-// Iske neeche aap ke baaki express ke require statements aayenge:
-const express = require('express');
-const cors = require('cors')
-
 require("dotenv").config();
 const express = require("express");
 const app = express();
@@ -14,7 +10,7 @@ const cors = require("cors");
 const resumeRouter = require("./Routes/resumeRouter");
 const AiRouter = require("./Routes/AiRoutes");
 
-// CORS automatic configuration (Yeh akele hi kafi hai)
+
 app.use(cors({
     origin: '*', 
     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH', 'DELETE'],
