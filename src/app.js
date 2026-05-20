@@ -1,10 +1,11 @@
-import dns from 'node:dns';
+
+const dns = require('node:dns');
 dns.setDefaultResultOrder('ipv4first');
 
-// Baaki aap ke saare imports iske neeche aayenge...
-import express from 'express';
-import cors from 'cors';
-// ...
+// Iske neeche aap ke baaki express ke require statements aayenge:
+const express = require('express');
+const cors = require('cors')
+
 require("dotenv").config();
 const express = require("express");
 const app = express();
