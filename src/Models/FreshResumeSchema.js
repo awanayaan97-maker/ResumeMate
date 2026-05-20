@@ -11,9 +11,7 @@ const FreshResumeSchema = new mongoose.Schema({
         github: String,
     },
 
-    objective:{
-      userObjective : String
-    },
+    objective:{type: String},
 
     education: {
         degree: String,

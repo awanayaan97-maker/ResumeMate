@@ -6,15 +6,15 @@ async function FresherResumeSave(req, res, next) {
 
 try{
 
-let {intershipPosition} = req.body
+let {internshipPosition} = req.body
 
 let internshipData = null
 
-if(intershipPosition && intershipPosition.trim() !== ""){
+if(internshipPosition && internshipPosition.trim() !== ""){
 
 internshipData = {
-    position: req.body.intershipPosition,
-    company: req.body.intershipCompany,
+    position: req.body.internshipPosition,
+    company: req.body.internshipCompany,
     startDate: req.body.internshipStartDate,
     endDate: req.body.internshipEndDate,
     description: req.body.internshipDes
@@ -53,9 +53,7 @@ let fresherResumeData = {
     github:  req.body.github
   },
 
-   objective:{
-    userObjective : req.body.objective
-   },
+   objective: req.body.objective,
 
    education:{
     degree: req.body.degree, 
@@ -67,8 +65,8 @@ let fresherResumeData = {
    certifications: req.body.certificationsName || "", 
     onlineCourses: req.body.onlineCourses || "",
     Achievements: req.body.Achievements || "",
-    skills: req.body.skills || [],
-    Languages: req.body.Languages || [],
+    skills: req.body.PreviewSkills || [],
+    Languages: req.body.fresherPreviewLanguages || [],
 
     internship: internshipData,
 
