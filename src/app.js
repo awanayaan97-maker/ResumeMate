@@ -1,3 +1,10 @@
+import dns from 'node:dns';
+dns.setDefaultResultOrder('ipv4first');
+
+// Baaki aap ke saare imports iske neeche aayenge...
+import express from 'express';
+import cors from 'cors';
+// ...
 require("dotenv").config();
 const express = require("express");
 const app = express();
