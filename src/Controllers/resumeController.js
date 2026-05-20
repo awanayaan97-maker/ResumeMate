@@ -67,8 +67,8 @@ let fresherResumeData = {
    certifications: req.body.certificationsName || "", 
     onlineCourses: req.body.onlineCourses || "",
     Achievements: req.body.Achievements || "",
-    skills: req.body.PreviewSkills ,
-    Languages: req.body.fresherPreviewLanguages,
+    skills: req.body.skills || [],
+    Languages: req.body.Languages || [],
 
     internship: internshipData,
 
