@@ -11,6 +11,9 @@ app.use(express.json());
 
 connectDB()
 
+app.get("/", function(req, res){
+  res.json("Welcome bro!")
+})
 app.use("/api/resume", resumeRouter);
 app.use("/api/gemini", AiRouter)
 
