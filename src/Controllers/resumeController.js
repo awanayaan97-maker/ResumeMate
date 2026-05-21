@@ -89,7 +89,7 @@ next(error)
 }
 
 
-const ProResumeSave = async (req, res) => {
+const ProResumeSave = async (req, res, next) => {
 try {
 
 
@@ -172,7 +172,7 @@ console.log(resumeData);
     } 
     
     catch (error) {
-       next(error)
+     next(error)
     }
 };
 
