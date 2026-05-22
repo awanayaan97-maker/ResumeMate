@@ -16,6 +16,7 @@ const FreshResumeSchema = new mongoose.Schema({
     education: {
         degree: String,
         institute: String,
+        field: String,
         gradYear: String,
         GPA: String
     },

@@ -57,6 +57,7 @@ let fresherResumeData = {
 
    education:{
     degree: req.body.degree, 
+    field: req.body.fresherStudyField || "",
     institute: req.body.institute,
     gradYear: req.body.gradYear,
     GPA: req.body.GPA
@@ -149,7 +150,7 @@ if(req.body.projectName2 && req.body.projectName2.trim() !== ""){
             education: {
                 degree: req.body.degree,
                 institution: req.body.institution,
-                field: req.body.fieldOfStudy,
+                field: req.body.fieldOfStudy || "",
                 year: req.body.year
             },
 
